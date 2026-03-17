@@ -48,7 +48,7 @@ const ProfilePage = () => {
 
   const handleSave = async () => {
     if (name.trim()) {
-      await updateProfileInDb({ student_name: name.trim() });
+      await updateProfileInDb({ display_name: name.trim() });
       toast.success(t('profile.profileUpdated'));
     } else {
       toast.error(t('profile.enterValidName'));

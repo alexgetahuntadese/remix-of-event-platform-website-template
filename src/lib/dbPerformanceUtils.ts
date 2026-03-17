@@ -78,7 +78,7 @@ export const updateProfileInDb = async (updates: { display_name?: string; avatar
   const { data, error } = await supabase
     .from('profiles')
     .update({ ...updates, updated_at: new Date().toISOString() })
-    .eq('id', user.id)
+    .eq('user_id', user.id)
     .select()
     .single();
 
