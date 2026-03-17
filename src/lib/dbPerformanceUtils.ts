@@ -71,7 +71,7 @@ export const getProfileFromDb = async () => {
 };
 
 // Update user profile
-export const updateProfileInDb = async (updates: { student_name?: string; avatar_url?: string }) => {
+export const updateProfileInDb = async (updates: { display_name?: string; avatar_url?: string }) => {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
 
