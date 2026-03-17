@@ -60,7 +60,7 @@ export const getProfileFromDb = async () => {
   const { data, error } = await supabase
     .from('profiles')
     .select('*')
-    .eq('id', user.id)
+    .eq('user_id', user.id)
     .single();
 
   if (error) {
@@ -71,14 +71,14 @@ export const getProfileFromDb = async () => {
 };
 
 // Update user profile
-export const updateProfileInDb = async (updates: { student_name?: string; avatar_url?: string }) => {
+export const updateProfileInDb = async (updates: { display_name?: string; avatar_url?: string }) => {
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null;
 
   const { data, error } = await supabase
     .from('profiles')
     .update({ ...updates, updated_at: new Date().toISOString() })
-    .eq('id', user.id)
+    .eq('user_id', user.id)
     .select()
     .single();
 
@@ -122,7 +122,7 @@ export const migrateLocalDataToDb = async () => {
     if (!error) {
       // Update profile name if set locally
       if (localData.profile?.student_name) {
-        await updateProfileInDb({ student_name: localData.profile.student_name });
+        await updateProfileInDb({ display_name: localData.profile.student_name });
       }
       localStorage.removeItem(STORAGE_KEY);
       console.log('Migrated local data to database');
