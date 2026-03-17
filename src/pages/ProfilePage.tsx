@@ -37,7 +37,7 @@ const ProfilePage = () => {
     const loadProfile = async () => {
       const profile = await getProfileFromDb();
       if (profile) {
-        setName(profile.student_name || '');
+        setName(profile.display_name || '');
       }
       const attempts = await getQuizAttemptsFromDb();
       setQuizCount(attempts.length);
