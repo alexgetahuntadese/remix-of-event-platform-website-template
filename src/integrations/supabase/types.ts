@@ -106,6 +106,48 @@ export type Database = {
         }
         Relationships: []
       }
+      quiz_attempts: {
+        Row: {
+          attempted_at: string
+          chapter: string
+          correct_answers: number
+          difficulty: string
+          grade: string
+          id: string
+          score: number
+          subject: string
+          time_spent: string
+          total_questions: number
+          user_id: string
+        }
+        Insert: {
+          attempted_at?: string
+          chapter?: string
+          correct_answers?: number
+          difficulty?: string
+          grade: string
+          id?: string
+          score?: number
+          subject: string
+          time_spent?: string
+          total_questions?: number
+          user_id: string
+        }
+        Update: {
+          attempted_at?: string
+          chapter?: string
+          correct_answers?: number
+          difficulty?: string
+          grade?: string
+          id?: string
+          score?: number
+          subject?: string
+          time_spent?: string
+          total_questions?: number
+          user_id?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string | null
