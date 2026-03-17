@@ -56,6 +56,7 @@ import { grade10ChemistryQuestions } from '@/data/grade10ChemistryQuestions';
 import { grade10EnglishQuestions } from '@/data/grade10EnglishQuestions';
 import { grade10CivicsQuestions } from '@/data/grade10CivicsQuestions';
 import { grade10EconomicsQuestions } from '@/data/grade10EconomicsQuestions';
+import { grade10HistoryQuestions } from '@/data/grade10HistoryQuestions';
 
 const ChaptersPage = () => {
   const navigate = useNavigate();
@@ -612,6 +613,7 @@ const ChaptersPage = () => {
         'English': grade10EnglishQuestions,
         'Civic Education': grade10CivicsQuestions,
         'Economics': grade10EconomicsQuestions,
+        'History': grade10HistoryQuestions,
       };
 
       const questionData = grade10QuestionSets[decodedSubject];
