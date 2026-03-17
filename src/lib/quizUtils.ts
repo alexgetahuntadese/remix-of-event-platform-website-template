@@ -6,6 +6,7 @@ import { grade10EnglishQuestions } from "@/data/grade10EnglishQuestions";
 import { grade10CivicsQuestions } from "@/data/grade10CivicsQuestions";
 import { grade10GeographyQuestions } from "@/data/grade10GeographyQuestions";
 import { grade10EconomicsQuestions } from "@/data/grade10EconomicsQuestions";
+import { grade10HistoryQuestions } from "@/data/grade10HistoryQuestions";
 import { grade11AgricultureQuestions } from "@/data/grade11AgricultureQuestions";
 import { grade11Biology } from "@/data/grade11Biology";
 import { grade11Chemistry } from "@/data/grade11Chemistry";
