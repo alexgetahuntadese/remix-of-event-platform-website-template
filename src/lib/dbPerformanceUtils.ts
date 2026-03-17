@@ -122,7 +122,7 @@ export const migrateLocalDataToDb = async () => {
     if (!error) {
       // Update profile name if set locally
       if (localData.profile?.student_name) {
-        await updateProfileInDb({ student_name: localData.profile.student_name });
+        await updateProfileInDb({ display_name: localData.profile.student_name });
       }
       localStorage.removeItem(STORAGE_KEY);
       console.log('Migrated local data to database');
