@@ -55,6 +55,7 @@ import { grade10PhysicsQuestions } from '@/data/grade10PhysicsQuestions';
 import { grade10ChemistryQuestions } from '@/data/grade10ChemistryQuestions';
 import { grade10EnglishQuestions } from '@/data/grade10EnglishQuestions';
 import { grade10CivicsQuestions } from '@/data/grade10CivicsQuestions';
+import { grade10EconomicsQuestions } from '@/data/grade10EconomicsQuestions';
 
 const ChaptersPage = () => {
   const navigate = useNavigate();
