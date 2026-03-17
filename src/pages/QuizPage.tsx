@@ -24,6 +24,7 @@ import { grade10ChemistryQuestions } from '@/data/grade10ChemistryQuestions';
 import { grade10EnglishQuestions } from '@/data/grade10EnglishQuestions';
 import { grade10CivicsQuestions } from '@/data/grade10CivicsQuestions';
 import { grade10EconomicsQuestions } from '@/data/grade10EconomicsQuestions';
+import { grade10HistoryQuestions } from '@/data/grade10HistoryQuestions';
 
 import QuestionCard from '@/components/QuestionCard';
 import Results from '@/components/Results';
